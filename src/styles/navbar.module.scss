@@ -1,0 +1,105 @@
+.container {
+  width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  .header {
+    display: grid;
+    width: 200px;
+    height: 250px;
+    background-color: #0d1840;
+    justify-items: center;
+    .image {
+      padding: 50px 50px 0 50px;
+    }
+    h2 {
+      color: #fff;
+      text-align: center;
+      font-family: Montserrat;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: -20px;
+    }
+    span {
+      color: #fff;
+      text-align: center;
+      font-family: Montserrat;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  .menuBar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      gap: 10px;
+      flex-direction: column;
+      width: 150px;
+      height: auto;
+      li {
+        padding: 10px;
+      }
+      li:nth-child(2) {
+        border-radius: 4px;
+        background: #0d1840;
+        color: #fff;
+        font-family: Roboto;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+
+    span {
+      color: #868e96;
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 20px;
+      margin-top: 30px;
+      margin-left: -80px;
+    }
+  }
+  .prefence {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      gap: 30px;
+      flex-direction: column;
+      width: 150px;
+      height: auto;
+      margin-left: 20px;
+    }
+
+    span {
+      color: #868e96;
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 30px;
+      margin-top: 30px;
+      margin-left: -60px;
+    }
+    .logo {
+      display: flex;
+      margin-top: 50px;
+    }
+  }
+}
