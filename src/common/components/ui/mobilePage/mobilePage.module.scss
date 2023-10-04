@@ -1,2 +1,13 @@
 .container {
+  display: flex;
+  width: 1295px;
+  height: 100px;
+  justify-content: center;
+  background-color: #0d1840;
+  color: aliceblue;
+  border-radius: 5px 5px 30px 30px;
+  .mobile {
+    display: flex;
+    margin: auto;
+  }
 }

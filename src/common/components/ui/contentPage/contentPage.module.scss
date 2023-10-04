@@ -1,0 +1,228 @@
+.container {
+  display: flex;
+  width: 1000px;
+  height: auto;
+
+  button {
+    display: grid;
+    margin-left: 50px;
+    align-content: center;
+    width: 125px;
+    height: 33px;
+    flex-shrink: 0;
+    border-radius: 13px;
+    background: #0d1840;
+    box-shadow: 0px 7.21px 16.42px -4.74px rgba(39, 76, 119, 0.16);
+    color: #fff;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .firstArea {
+    display: flex;
+    flex-direction: column;
+    width: 531px;
+    height: 566px;
+    margin-left: -100px;
+    gap: 10px;
+
+    h1 {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 19px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+    span {
+      font-family: Roboto;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 14px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+    h3 {
+      color: #0d1840;
+      font-family: Roboto;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    // input {
+    //   display: flex;
+    //   line-height: 53px;
+    //   padding: 0 20px;
+    //   top: 419px;
+    //   left: 284px;
+    //   border-radius: 8px 8px 35px 8px;
+    //   border: 1px solid #0d1840;
+    //   background: #fff;
+    // }
+
+    // .formFields {
+    //   .redbull {
+    //     display: flex;
+    //     flex-direction: column;
+    //     margin-top: 20px;
+    //     width: 305px;
+    //     position: relative;
+
+    //     img {
+    //       width: 20px;
+    //       height: 20px;
+    //       position: absolute;
+    //       margin-top: 5px;
+    //     }
+    //   }
+
+    //   .firstBox {
+    //     display: flex;
+    //     right: 4px;
+    //     top: 42px;
+    //   }
+    // }
+  }
+  .secondArea {
+    display: flex;
+    flex-direction: column;
+    width: 612px;
+    height: 773px;
+    margin-left: 353px;
+    gap: 15px;
+
+    h1 {
+      color: #000;
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    span {
+      color: #000;
+      font-family: Roboto;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+    input {
+      text-align: center;
+      display: flex;
+      margin-top: 38px;
+      width: 285px;
+      height: 59px;
+      top: 408px;
+      left: 868px;
+      border-radius: 25px 25px 25px 25px;
+      border: 1px solid #0d1840;
+      box-shadow: 0px 7.21px 16.42px -4.74px rgba(39, 76, 119, 0.16);
+    }
+    // button {
+    //   display: grid;
+    //   margin-left: 50px;
+    //   align-content: center;
+    //   width: 125px;
+    //   height: 33px;
+    //   flex-shrink: 0;
+    //   border-radius: 13px;
+    //   background: #0d1840;
+    //   box-shadow: 0px 7.21px 16.42px -4.74px rgba(39, 76, 119, 0.16);
+    //   color: #fff;
+    //   font-family: Roboto;
+    //   font-size: 14px;
+    //   font-style: normal;
+    //   font-weight: 400;
+    //   line-height: normal;
+    // }
+    .top1 {
+      .top2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 23px;
+        width: 280px;
+        position: relative;
+
+        .textFirst {
+          position: absolute;
+        }
+        .textTop {
+          position: relative;
+          top: 56px;
+          left: 6px;
+          color: #fff;
+          font-family: Roboto;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        .textBottom {
+          position: relative;
+          left: 32px;
+          top: 47px;
+          color: #fff;
+          font-family: Roboto;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        .textLast {
+          position: relative;
+          left: 17px;
+          top: 19px;
+          color: #fff;
+          font-family: Roboto;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        .textZero {
+          position: relative;
+          left: 41px;
+          top: 19px;
+          color: #fff;
+          font-family: Roboto;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        // img {
+        //   width: 54px;
+        //   height: 59px;
+        //   position: absolute;
+        // }
+      }
+      .secondBox {
+        display: flex;
+        top: 37px;
+        width: 54px;
+        height: 59px;
+        position: absolute;
+      }
+    }
+
+    // .ads {
+    //   display: flex;
+    //   margin-top: 30px;
+    //   margin-left: 30px;
+    // }
+  }
+  .ads {
+    display: flex;
+    position: absolute;
+    margin-top: 600px;
+    margin-left: 620px;
+  }
+}

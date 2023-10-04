@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/styles/header.module.scss";
+import styles from "@/styles/navbar.module.scss";
 import TımLogo from "@/common/media/TIM.png";
 import Image from "next/image";
 import ImageHeader from "@/common/media/image1.png";
