@@ -85,6 +85,7 @@ export default function ContentPage() {
       console.warn(error);
     }
   };
+
   useEffect(() => {
     getAllDataFirst();
     getAllDataSecond();
@@ -160,7 +161,6 @@ export default function ContentPage() {
         <div className={styles.top1}>
           <div className={styles.top2}>
             <input type="text" value={conclusions.ch4 || ""} readOnly={true} />
-            {/* <img src={WhiteLogo} alt="" className={styles.secondBox} /> */}
             <Image className={styles.secondBox} alt="" src={WhiteLogo} />
             <div className={styles.textFirst}>
               <p className={styles.textTop}>CH</p>
@@ -169,9 +169,7 @@ export default function ContentPage() {
           </div>
           <div className={styles.top2}>
             <input type="text" value={conclusions.co2 || ""} readOnly={true} />
-            {/* <img src={WhiteLogo} alt="" className={styles.secondBox} /> */}
             <Image className={styles.secondBox} alt="" src={WhiteLogo} />
-
             <div className={styles.textFirst}>
               <p className={styles.textTop}>CO</p>
               <p className={styles.textBottom}>2</p>
@@ -179,9 +177,7 @@ export default function ContentPage() {
           </div>
           <div className={styles.top2}>
             <input type="text" value={conclusions.co2e || ""} readOnly={true} />
-            {/* <img src={WhiteLogo} alt="" className={styles.secondBox} /> */}
             <Image className={styles.secondBox} alt="" src={WhiteLogo} />
-
             <div className={styles.textFirst}>
               <p className={styles.textTop}>CO</p>
               <p className={styles.textBottom}>2</p>
@@ -190,9 +186,7 @@ export default function ContentPage() {
           </div>
           <div className={styles.top2}>
             <input type="text" value={conclusions.no2 || ""} readOnly={true} />
-            {/* <img src={WhiteLogo} alt="" className={styles.secondBox} /> */}
             <Image className={styles.secondBox} alt="" src={WhiteLogo} />
-
             <div className={styles.textFirst}>
               <p className={styles.textTop}>N</p>
               <p className={styles.textBottom}>2</p>

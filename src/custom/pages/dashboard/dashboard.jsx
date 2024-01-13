@@ -4,18 +4,20 @@ import styles from "@/custom/pages/dashboard/dashboard.module.scss";
 import MobilePage from "@/common/components/ui/mobilePage/mobilePage";
 import ContentPage from "@/common/components/ui/contentPage/contentPage";
 import Navbar from "@/common/components/ui/navbar/navbar";
+import { useState } from "react";
 
 export default function Dashboard() {
+  const [page, pages] = useState("");
+
   return (
     <div className={styles.container}>
       <Navbar />
       <div className={styles.content}>
         <Header />
         <MobilePage />
-      </div>
-      <div className={styles.bambi}>
         <ContentPage />
       </div>
+      <div className={styles.bambi}></div>
     </div>
   );
 }

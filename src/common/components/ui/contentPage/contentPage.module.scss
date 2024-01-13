@@ -1,7 +1,10 @@
 .container {
   display: flex;
-  width: 1000px;
+  margin-top: 30px;
+  width: 1256px;
   height: auto;
+  flex-direction: row;
+  justify-content: space-between;
 
   button {
     display: grid;
@@ -24,9 +27,9 @@
   .firstArea {
     display: flex;
     flex-direction: column;
-    width: 531px;
+    width: 400px;
     height: 566px;
-    margin-left: -100px;
+    margin-left: 60px;
     gap: 10px;
 
     h1 {
@@ -55,6 +58,12 @@
       line-height: normal;
       margin-bottom: 20px;
       margin-top: 20px;
+    }
+
+    .formFields {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
     }
     // input {
     //   display: flex;
@@ -95,7 +104,7 @@
     flex-direction: column;
     width: 612px;
     height: 773px;
-    margin-left: 353px;
+    /* margin-left: 353px; */
     gap: 15px;
 
     h1 {
@@ -220,6 +229,7 @@
     // }
   }
   .ads {
+    cursor: pointer;
     display: flex;
     position: absolute;
     margin-top: 600px;

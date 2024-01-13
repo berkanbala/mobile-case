@@ -1,8 +1,7 @@
 .container {
   width: 200px;
   height: auto;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   .header {
     display: grid;
     width: 200px;
