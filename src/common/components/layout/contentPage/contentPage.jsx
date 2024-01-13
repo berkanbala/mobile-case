@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
-import styles from "@/common/components/ui/contentPage/contentPage.module.scss";
 import Select from "react-select";
 import WhiteLogo from "@/common/media/1.png";
 import Image from "next/image";
+import styles from "@/common/components/layout/contentPage/contentPage.module.scss";
 
 export default function ContentPage() {
   const [industryData, setIndustryData] = useState([]);
@@ -91,6 +91,17 @@ export default function ContentPage() {
     getAllDataSecond();
   }, []);
 
+  const customStyles = {
+    // option: (styles) => ({
+    //   ...styles,
+    //   cursor: "pointer",
+    // }),
+    control: (styles) => ({
+      ...styles,
+      cursor: "pointer",
+    }),
+  };
+
   return (
     <div className={styles.container} onSubmit={onSubmitForm}>
       <div className={styles.firstArea}>
@@ -102,6 +113,7 @@ export default function ContentPage() {
         <div className={styles.formFields}>
           <h3>Facility</h3>
           <Select
+            styles={customStyles}
             options={optionFacilitiesData}
             onChange={({ label }) =>
               setFormData({
@@ -112,6 +124,7 @@ export default function ContentPage() {
           />
           <h3>Fuel Types</h3>
           <Select
+            styles={customStyles}
             options={optionFuelTypesData}
             onChange={({ label }) =>
               setFormData({
@@ -122,6 +135,7 @@ export default function ContentPage() {
           />
           <h3>Fuels</h3>
           <Select
+            styles={customStyles}
             options={optionUnitsData}
             onChange={({ label }) =>
               setFormData({
@@ -132,6 +146,7 @@ export default function ContentPage() {
           />
           <h3>Sources</h3>
           <Select
+            styles={customStyles}
             options={sourcesData}
             onChange={({ label }) =>
               setFormData({
@@ -142,6 +157,7 @@ export default function ContentPage() {
           />
           <h3>Units</h3>
           <Select
+            styles={customStyles}
             options={fuelsData}
             onChange={({ label }) =>
               setFormData({

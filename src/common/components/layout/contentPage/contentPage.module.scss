@@ -135,23 +135,7 @@
       border: 1px solid #0d1840;
       box-shadow: 0px 7.21px 16.42px -4.74px rgba(39, 76, 119, 0.16);
     }
-    // button {
-    //   display: grid;
-    //   margin-left: 50px;
-    //   align-content: center;
-    //   width: 125px;
-    //   height: 33px;
-    //   flex-shrink: 0;
-    //   border-radius: 13px;
-    //   background: #0d1840;
-    //   box-shadow: 0px 7.21px 16.42px -4.74px rgba(39, 76, 119, 0.16);
-    //   color: #fff;
-    //   font-family: Roboto;
-    //   font-size: 14px;
-    //   font-style: normal;
-    //   font-weight: 400;
-    //   line-height: normal;
-    // }
+
     .top1 {
       .top2 {
         display: flex;
@@ -207,32 +191,24 @@
           font-weight: 600;
           line-height: normal;
         }
-        // img {
-        //   width: 54px;
-        //   height: 59px;
-        //   position: absolute;
-        // }
       }
       .secondBox {
         display: flex;
-        top: 37px;
+        top: 38px;
         width: 54px;
         height: 59px;
         position: absolute;
       }
     }
-
-    // .ads {
-    //   display: flex;
-    //   margin-top: 30px;
-    //   margin-left: 30px;
-    // }
   }
   .ads {
-    cursor: pointer;
     display: flex;
     position: absolute;
     margin-top: 600px;
     margin-left: 620px;
+
+    button {
+      cursor: pointer;
+    }
   }
 }

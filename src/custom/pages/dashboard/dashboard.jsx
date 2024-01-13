@@ -1,9 +1,9 @@
 "use client";
-import Header from "@/common/components/ui/header/header";
+import Header from "@/common/components/layout/header/header";
 import styles from "@/custom/pages/dashboard/dashboard.module.scss";
-import MobilePage from "@/common/components/ui/mobilePage/mobilePage";
-import ContentPage from "@/common/components/ui/contentPage/contentPage";
-import Navbar from "@/common/components/ui/navbar/navbar";
+import MobilePage from "@/common/components/layout/mobilePage/mobilePage";
+import ContentPage from "@/common/components/layout/contentPage/contentPage";
+import Navbar from "@/common/components/layout/navbar/navbar";
 import { useState } from "react";
 
 export default function Dashboard() {
