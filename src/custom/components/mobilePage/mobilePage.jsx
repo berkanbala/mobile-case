@@ -1,4 +1,4 @@
-import styles from "@/common/components/layout/mobilePage/mobilePage.module.scss";
+import styles from "./mobilePage.module.scss";
 
 export default function MobilePage() {
   return (

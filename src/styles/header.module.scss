@@ -1,14 +1,16 @@
 .container {
   display: flex;
-  // justify-content: space-between;
+
   .leftSide {
     display: grid;
     grid-template-rows: repeat(2, 95px);
     grid-template-columns: repeat(2, 140px);
+
     .headerImage {
       padding: 5px 0px 5px 5px;
       margin-top: 40px;
     }
+
     p {
       color: #343a40;
       font-family: Roboto;
@@ -20,6 +22,7 @@
       margin-top: 120px;
     }
   }
+
   .rightSide {
     display: grid;
     padding: 30px 30px 0;
@@ -28,6 +31,7 @@
     margin-left: 40px;
     grid-template-rows: repeat(2, 40px);
     grid-template-columns: repeat(1, 716px);
+
     .title {
       width: 225px;
       height: auto;
@@ -38,6 +42,7 @@
       font-weight: 700;
       line-height: normal;
     }
+
     .p {
       display: flex;
       flex-direction: column;

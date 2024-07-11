@@ -6,24 +6,6 @@
   flex-direction: row;
   justify-content: space-between;
 
-  button {
-    display: grid;
-    margin-left: 50px;
-    align-content: center;
-    width: 125px;
-    height: 33px;
-    flex-shrink: 0;
-    border-radius: 13px;
-    background: #0d1840;
-    box-shadow: 0px 7.21px 16.42px -4.74px rgba(39, 76, 119, 0.16);
-    color: #fff;
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-
   .firstArea {
     display: flex;
     flex-direction: column;
@@ -40,6 +22,7 @@
       letter-spacing: 0em;
       text-align: left;
     }
+
     span {
       font-family: Roboto;
       font-size: 12px;
@@ -49,6 +32,7 @@
       text-align: left;
       margin-bottom: 30px;
     }
+
     h3 {
       color: #0d1840;
       font-family: Roboto;
@@ -65,46 +49,13 @@
       flex-direction: column;
       width: 300px;
     }
-    // input {
-    //   display: flex;
-    //   line-height: 53px;
-    //   padding: 0 20px;
-    //   top: 419px;
-    //   left: 284px;
-    //   border-radius: 8px 8px 35px 8px;
-    //   border: 1px solid #0d1840;
-    //   background: #fff;
-    // }
-
-    // .formFields {
-    //   .redbull {
-    //     display: flex;
-    //     flex-direction: column;
-    //     margin-top: 20px;
-    //     width: 305px;
-    //     position: relative;
-
-    //     img {
-    //       width: 20px;
-    //       height: 20px;
-    //       position: absolute;
-    //       margin-top: 5px;
-    //     }
-    //   }
-
-    //   .firstBox {
-    //     display: flex;
-    //     right: 4px;
-    //     top: 42px;
-    //   }
-    // }
   }
+
   .secondArea {
     display: flex;
     flex-direction: column;
     width: 612px;
     height: 773px;
-    /* margin-left: 353px; */
     gap: 15px;
 
     h1 {
@@ -115,6 +66,7 @@
       font-weight: 600;
       line-height: normal;
     }
+
     span {
       color: #000;
       font-family: Roboto;
@@ -123,6 +75,7 @@
       font-weight: 300;
       line-height: normal;
     }
+
     input {
       text-align: center;
       display: flex;
@@ -147,6 +100,7 @@
         .textFirst {
           position: absolute;
         }
+
         .textTop {
           position: relative;
           top: 56px;
@@ -158,6 +112,7 @@
           font-weight: 600;
           line-height: normal;
         }
+
         .textBottom {
           position: relative;
           left: 32px;
@@ -169,6 +124,7 @@
           font-weight: 600;
           line-height: normal;
         }
+
         .textLast {
           position: relative;
           left: 17px;
@@ -180,6 +136,7 @@
           font-weight: 600;
           line-height: normal;
         }
+
         .textZero {
           position: relative;
           left: 41px;
@@ -192,6 +149,7 @@
           line-height: normal;
         }
       }
+
       .secondBox {
         display: flex;
         top: 38px;
@@ -201,14 +159,11 @@
       }
     }
   }
-  .ads {
+
+  .button {
     display: flex;
     position: absolute;
     margin-top: 600px;
     margin-left: 620px;
-
-    button {
-      cursor: pointer;
-    }
   }
 }

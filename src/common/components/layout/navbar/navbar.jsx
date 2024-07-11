@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "@/styles/navbar.module.scss";
-import TımLogo from "@/common/media/TIM.png";
+import TımLogo from "@/common/assets/media/TIM.png";
 import Image from "next/image";
-import ImageHeader from "@/common/media/image1.png";
+import ImageHeader from "@/common/assets/media/image1.png";
 
 export default function Navbar() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <Image alt="" className={styles.image} src={ImageHeader} />
+        <Image alt="" className={styles.image} src={ImageHeader} priority />
         <h2>Murat Turan</h2>
         <span>Tedarik Zinciri Yöneticisi</span>
       </div>

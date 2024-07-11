@@ -1,28 +1,21 @@
 "use client";
 import { useEffect, useState } from "react";
 import Select from "react-select";
-import WhiteLogo from "@/common/media/1.png";
+import WhiteLogo from "@/common/assets/media/1.png";
 import Image from "next/image";
-import styles from "@/common/components/layout/contentPage/contentPage.module.scss";
+import styles from "./contentPage.module.scss";
+import React, { useId } from "react";
+import { getInitialValuesForm } from "./helpers";
+import { OPTIONS_CATEGORY } from "@/common/shared";
+import { Button } from "@/common/components/ui/button/button";
+import { getDataFromTestApi } from "@/common/services/testService";
 
 export default function ContentPage() {
-  const [industryData, setIndustryData] = useState([]);
-  const [optionFacilitiesData, setOptionFacilitiesData] = useState([]);
-  const [optionFuelTypesData, setOptionFuelTypesData] = useState([]);
-  const [optionUnitsData, setOptionUnitsData] = useState([]);
-  const [sourcesData, setSourcesData] = useState([]);
-  const [fuelsData, setFuelsData] = useState([]);
-  const [formData, setFormData] = useState({
-    facilities: "",
-    fuelTypes: "",
-    units: "",
-    sources: "",
-    fuels: "",
-  });
+  const [formData, setFormData] = useState(getInitialValuesForm());
   const [conclusions, setConclusions] = useState([]);
   const [form, setForm] = useState("");
-  const [cart, setCart] = useState([]);
   const [customerName, setCustomerName] = useState("");
+  const [options, setOptions] = useState([]);
 
   const onSubmitForm = (e) => {
     e.preventdefault();
@@ -30,44 +23,19 @@ export default function ContentPage() {
     setCustomerName("");
   };
 
-  const buttonRemove = () => {
-    setCart([]);
-    console.log("tıklandı");
+  const handleClear = () => {
+    setFormData(getInitialValuesForm());
   };
 
-  const buttonSave = () => {
+  const handleSave = () => {
     setForm();
-    console.log("tıklandı2");
+    console.log(formData);
   };
 
   const getAllDataFirst = async () => {
     try {
-      const response = await fetch(
-        "http://3.86.79.133/dijital-mentorluk-backend-test/public/test-data"
-      );
-      const data = await response.json();
-      setIndustryData(data);
-      console.log(data);
-      const optionFacilities = data.facilities.map((item) => {
-        return { value: item, label: item };
-      });
-      const optionFuelTypes = data.fuel_types.map((item) => {
-        return { value: item.name_tr, label: item.name_tr };
-      });
-      const optionUnits = data.units.map((item) => {
-        return { value: item.name_tr, label: item.name_tr };
-      });
-      const optionsSources = data.sources.map((item) => {
-        return { value: item.name_tr, label: item.name_tr };
-      });
-      const optionsFuels = data.fuels.map((item) => {
-        return { value: item.name_tr, label: item.name_tr };
-      });
-      setFuelsData([...optionsFuels]);
-      setSourcesData([...optionsSources]);
-      setOptionUnitsData([...optionUnits]);
-      setOptionFuelTypesData([...optionFuelTypes]);
-      setOptionFacilitiesData([...optionFacilities]);
+      const response = await getDataFromTestApi();
+      setOptions(response);
     } catch (error) {
       console.warn(error);
     }
@@ -80,7 +48,6 @@ export default function ContentPage() {
       );
       const data = await response.json();
       setConclusions(data);
-      console.log(data);
     } catch (error) {
       console.warn(error);
     }
@@ -102,6 +69,10 @@ export default function ContentPage() {
     }),
   };
 
+  // console.log(formData);
+
+  const id = useId();
+
   return (
     <div className={styles.container} onSubmit={onSubmitForm}>
       <div className={styles.firstArea}>
@@ -113,58 +84,68 @@ export default function ContentPage() {
         <div className={styles.formFields}>
           <h3>Facility</h3>
           <Select
+            instanceId={id}
             styles={customStyles}
-            options={optionFacilitiesData}
-            onChange={({ label }) =>
+            options={options[OPTIONS_CATEGORY.facilities]}
+            onChange={({ value }) =>
               setFormData({
                 ...formData,
-                facilities: label,
+                facilities: value,
               })
             }
+            defaultValue={formData.facilities}
           />
           <h3>Fuel Types</h3>
           <Select
+            instanceId={id}
             styles={customStyles}
-            options={optionFuelTypesData}
-            onChange={({ label }) =>
+            options={options[OPTIONS_CATEGORY.fuel_types]}
+            onChange={({ value }) =>
               setFormData({
                 ...formData,
-                fuelTypes: label,
+                fuelTypes: value,
               })
             }
+            defaultValue={formData.fuelTypes}
           />
           <h3>Fuels</h3>
           <Select
+            instanceId={id}
             styles={customStyles}
-            options={optionUnitsData}
-            onChange={({ label }) =>
+            options={options[OPTIONS_CATEGORY.fuels]}
+            onChange={({ value }) =>
               setFormData({
                 ...formData,
-                units: label,
+                units: value,
               })
             }
+            defaultValue={formData.fuels}
           />
           <h3>Sources</h3>
           <Select
+            instanceId={id}
             styles={customStyles}
-            options={sourcesData}
-            onChange={({ label }) =>
+            options={options[OPTIONS_CATEGORY.sources]}
+            onChange={({ value }) =>
               setFormData({
                 ...formData,
-                sources: label,
+                sources: value,
               })
             }
+            defaultValue={formData.sources}
           />
           <h3>Units</h3>
           <Select
+            instanceId={id}
             styles={customStyles}
-            options={fuelsData}
-            onChange={({ label }) =>
+            options={options[OPTIONS_CATEGORY.units]}
+            onChange={({ value }) =>
               setFormData({
                 ...formData,
-                fuels: label,
+                fuels: value,
               })
             }
+            defaultValue={formData.units}
           />
         </div>
       </div>
@@ -211,13 +192,19 @@ export default function ContentPage() {
           </div>
         </div>
       </div>
-      <div className={styles.ads}>
-        <button type="submit" onClick={buttonRemove}>
-          Sıfırla
-        </button>
-        <button type="submit" onClick={buttonSave}>
-          Kaydet
-        </button>
+      <div className={styles.button}>
+        <Button
+          type="submit"
+          onClick={handleClear}
+          label="Sıfırla"
+          disabled={!Object.values(formData).some((element) => element !== "")}
+        />
+        <Button
+          type="submit"
+          onClick={handleSave}
+          label="Kaydet"
+          disabled={Object.values(formData).some((element) => element == "")}
+        />
       </div>
     </div>
   );

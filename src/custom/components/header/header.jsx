@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/styles/header.module.scss";
 import Image from "next/image";
-import Logo from "@/common/media/logo.png";
+import Logo from "@/common/assets/media/logo.png";
 
 export default function Header() {
   return (
